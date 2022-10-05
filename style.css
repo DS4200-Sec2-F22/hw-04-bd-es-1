@@ -1,3 +1,24 @@
 body {
     font-family: Arial;
 }
+
+h1 {
+    align-content: center;
+}
+
+
+.columns {
+    display: flex;
+}
+
+#column1 {
+    width: 60%;
+}
+
+#column2 {
+    width: 40%;
+}
+
+.acknowledgements {
+    padding-top: 300px;
+}
