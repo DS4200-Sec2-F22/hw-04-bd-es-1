@@ -11,20 +11,55 @@
     <h1>hw-04: Event Handling</h1>
 
     <div class='columns'>
-        <div id='column1'> 
-            <svg viewbox="-5,0,100,100">
+        <div id='column1'>
+            <svg viewbox="-5,0,100,100" id="viewbox">
                 <!-- axes -->
-                <line x1='0' y1='0' x2="0" y2='50' stroke='black' stroke-width="0.5"  />
-                <line x1="0" y1='50' x2='50' y2="50" stroke="black" stroke-width="0.5" ></line>
+                <line x1='0' y1='0' x2="0" y2='50' stroke='black' stroke-width="0.5" />
+                <line x1="0" y1='50' x2='50' y2="50" stroke="black" stroke-width="0.5"></line>
             </svg>
-
-
         </div>
 
 
         <div id="column2">
-            <h1>Hello</h1>
+            <h3 id="clickedPointInfo">Coordinates: </h3>
+
+            <div class="submission">
+                <div>
+                    <label>X coordinate</label>
+                    <select id="xInput">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+
+                    <label>Y coordinate</label>
+                    <select id="yInput">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit">
+
+            </div>
+
         </div>
+        <div>
+
+        </div>
+
 
     </div>
 
