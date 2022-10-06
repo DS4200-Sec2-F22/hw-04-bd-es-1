@@ -25,34 +25,15 @@
 
             <div class="submission">
                 <div>
-                    <label>X coordinate</label>
-                    <select id="xInput">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-
-                    <label>Y coordinate</label>
-                    <select id="yInput">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
+                    <form>
+                        <input type="number" id="xInput" min="1" max="9" value="1">
+                        <input type="number" id="yInput" min="1" max="9" value="1">
+                    </form>
                 </div>
-                <input type="submit" value="Submit">
 
+                <button id="button">
+                    Button
+                </button>
             </div>
 
         </div>
@@ -75,7 +56,7 @@
 </div>
 
 
-<script src=" main.js">
+<script src= " main.js">
 </script>
 </body>
 
