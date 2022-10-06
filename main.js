@@ -15,28 +15,38 @@ const chart = document.getElementById('viewbox');
 // scale of chart
 const scale = 5;
 
-
 // placing points 
 for (let i = 0; i < xAxis.length; i++) {
+  plotPoint(xAxis[i], yAxis[i])
+}
+
+
+function plotPoint(x, y) {
 
   const svg = document.getElementById('viewbox'); //Get svg element
   const newElement = document.createElementNS("http://www.w3.org/2000/svg", "circle"); //Create a path in SVG's namespace
 
-  newElement.setAttribute("cx", xAxis[i] * scale);
-  newElement.setAttribute("cy", 50 - (yAxis[i] * scale));
+  newElement.setAttribute("cx", x * scale);
+  newElement.setAttribute("cy", 50 - (y * scale));
   newElement.setAttribute("r", 2);
   newElement.classList.add('point')
+  newElement.addEventListener("click", pointClicked);
   svg.appendChild(newElement);
+
+
 }
 
 
+
+
+// adding border to item 
 function pointClicked() {
   this.classList.toggle("border");
 
   let xPos = (this.getAttribute("cx") / 5);
   let yPos = 10 - (this.getAttribute("cy") / 5);
 
-  let clickedPointInfo = "Coordinates: (" + xPos + ", " + yPos + ")";
+  let clickedPointInfo = "Last point clicked: (" + xPos + ", " + yPos + ")";
 
   document.getElementById("clickedPointInfo").innerHTML = clickedPointInfo;
 
@@ -53,25 +63,18 @@ for (let i = 0; i < circleList.length; i++) {
 // event for submit button 
 
 function submitClicked() {
-  let x = document.getElementById("xInput");
-  let y = document.getElementById("yInput");
+  let x = Number(document.getElementById("xInput").value);
+  let y = Number(document.getElementById("yInput").value);
 
-  console.log(x.value)
-  console.log(y.value)
+  plotPoint(x, y)
 
-
-
-
-  // let xInput = document.getElementById("xInput");
-  // let yInput = document.getElementById("yInput");
-
-  // console.log(xInput)
-  // console.log(yInput)
 
 }
 
 
 document.getElementById("button").addEventListener("click", submitClicked)
+
+
 
 
 
