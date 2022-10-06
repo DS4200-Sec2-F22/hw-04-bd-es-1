@@ -39,3 +39,8 @@ h1 {
 .submission {
     display: block;
 }
+
+input {
+    width: 30px;
+    height: 30px;
+}
