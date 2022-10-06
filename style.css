@@ -22,3 +22,20 @@ h1 {
 .acknowledgements {
     padding-top: 300px;
 }
+
+.point {
+    fill: blue;
+}
+
+.point:hover {
+    fill: rgba(194, 194, 18, 0.491); 
+}
+
+.border {
+    stroke-width: 1px;
+    stroke: orange;
+}
+
+.submission {
+    display: block;
+}
