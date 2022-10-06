@@ -1,12 +1,13 @@
 // JS Code for HW3
 // Brady Duncan and Evan Suslovich
-// Last Modified: 10.5.2022
+// Last Modified: 10.6.2022
 
 
 
 // starting points
 const xAxis = [1, 2, 6, 9]
 const yAxis = [2, 4, 2, 9]
+
 
 // get viewbox by id 
 const chart = document.getElementById('viewbox');
@@ -15,12 +16,8 @@ const chart = document.getElementById('viewbox');
 // scale of chart
 const scale = 5;
 
-// placing points 
-for (let i = 0; i < xAxis.length; i++) {
-  plotPoint(xAxis[i], yAxis[i])
-}
 
-
+// plot points on the scatter plot
 function plotPoint(x, y) {
 
   const svg = document.getElementById('viewbox'); //Get svg element
@@ -32,14 +29,17 @@ function plotPoint(x, y) {
   newElement.classList.add('point')
   newElement.addEventListener("click", pointClicked);
   svg.appendChild(newElement);
-
-
 }
 
 
+// place the starting points 
+for (let i = 0; i < xAxis.length; i++) {
+  plotPoint(xAxis[i], yAxis[i])
+}
 
 
-// adding border to item 
+// when clicked, add the border to a point and set the corresponding text
+// box to state its coordinates
 function pointClicked() {
   this.classList.toggle("border");
 
@@ -52,26 +52,26 @@ function pointClicked() {
 
 }
 
-
+// all points on thge scatter plot
 const circleList = document.getElementsByTagName("circle");
+
 
 // adds event listener to each point 
 for (let i = 0; i < circleList.length; i++) {
   document.getElementsByTagName("circle")[i].addEventListener("click", pointClicked);
 }
 
-// event for submit button 
 
+// when the submit button is clicked, plot the new point
 function submitClicked() {
   let x = Number(document.getElementById("xInput").value);
   let y = Number(document.getElementById("yInput").value);
 
   plotPoint(x, y)
-
-
 }
 
 
+// assign an event handler to the form submit button
 document.getElementById("button").addEventListener("click", submitClicked)
 
 
