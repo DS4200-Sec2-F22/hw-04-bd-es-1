@@ -50,6 +50,28 @@ for (let i = 0; i < circleList.length; i++) {
   document.getElementsByTagName("circle")[i].addEventListener("click", pointClicked);
 }
 
+// event for submit button 
+
+function submitClicked() {
+  let x = document.getElementById("xInput");
+  let y = document.getElementById("yInput");
+
+  console.log(x.value)
+  console.log(y.value)
+
+
+
+
+  // let xInput = document.getElementById("xInput");
+  // let yInput = document.getElementById("yInput");
+
+  // console.log(xInput)
+  // console.log(yInput)
+
+}
+
+
+document.getElementById("button").addEventListener("click", submitClicked)
 
 
 
